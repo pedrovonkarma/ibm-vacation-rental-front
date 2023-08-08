@@ -7,7 +7,6 @@
 </header>
 
 <div class="booking-cards-container">
-    <app-booking-card></app-booking-card>
-    <app-booking-card></app-booking-card>
-    <app-editable-booking-card></app-editable-booking-card>
+    <p *ngIf="list.length==0" >Carregando...</p>
+    <app-booking-card *ngFor="let bookingItem of list" [bookingItem]="bookingItem"></app-booking-card>
 </div>

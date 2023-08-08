@@ -10,6 +10,8 @@ import { BookingFormComponent } from './components/booking-form/booking-form.com
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { CreateBookingComponent } from './pages/create-booking/create-booking.component';
 import { ShowBookingComponent } from './pages/show-booking/show-booking.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ShowBookingComponent } from './pages/show-booking/show-booking.componen
     ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

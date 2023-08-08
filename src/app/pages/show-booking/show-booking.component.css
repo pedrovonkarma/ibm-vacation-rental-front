@@ -31,3 +31,6 @@ span{
     justify-content: center;
     flex-wrap: wrap;
 }
+p{
+    margin-inline: auto;
+}

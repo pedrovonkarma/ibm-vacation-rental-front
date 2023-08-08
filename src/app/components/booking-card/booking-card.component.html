@@ -1,15 +1,15 @@
 <div class="booking-card">
     <div>
         <p>Nome do hóspede:</p>
-        <h2>John</h2>
+        <h2>{{ bookingItem.nomeHospede }}</h2>
         <p>Início da estadia:</p>
-        <h2>12-12-1212</h2>
+        <h2>{{ bookingItem.dataInicio }}</h2>
         <p>Fim da estadia:</p>
-        <h2>12-12-1212</h2>
+        <h2>{{ bookingItem.dataFim }}</h2>
         <p>Qtd. de pessoas:</p>
-        <h2>3</h2>
+        <h2>{{ bookingItem.quantidadePessoas }}</h2>
         <p>Situação:</p>
-        <h2>CONFIRMADO</h2>
+        <h2>{{ bookingItem.status }}</h2>
     </div>
     <div class="buttons-container">
         <a>
