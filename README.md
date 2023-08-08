@@ -1,27 +1,64 @@
-# IbmVacationRentalFront
+# Frontend da Aplicação de Reservas de Casa de Temporada (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+Este repositório contém o frontend da aplicação de reservas de casa de temporada, desenvolvida em Angular. A aplicação interage com o backend Spring Boot para listar, criar, editar e cancelar reservas, bem como cadastrar novos usuários.
 
-## Development server
+## Requisitos Técnicos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular: Framework JavaScript utilizado para o desenvolvimento do frontend.
+- HttpClient: Módulo do Angular para fazer requisições HTTP.
+- Angular Router: Módulo para gerenciamento de rotas da aplicação.
 
-## Code scaffolding
+## Configuração e Execução
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone este repositório para sua máquina local.
+2. Certifique-se de ter o Node.js e o Angular CLI instalados.
+- **Node.js:** Caso não tenha o Node.js instalado, você pode baixá-lo e instalá-lo a partir do site oficial: [https://nodejs.org/](https://nodejs.org/)
 
-## Build
+- **Angular CLI:** Para instalar o Angular CLI globalmente, execute o seguinte comando no seu terminal:
+     ```
+     npm install -g @angular/cli
+     ```
+3. Navegue até a pasta do projeto frontend.
+4. Instale as dependências com o comando:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm install
+```
+5. Configure a URL base da API no arquivo `src/app/api.config.ts`.
+6. Configure a URL base da API em `src/environments`.
+7. Inicie o servidor de desenvolvimento com o comando:
 
-## Running unit tests
+```bash
+npm start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Páginas da Aplicação
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Página Inicial - Lista de Reservas
 
-## Further help
+- Esta página exibe a lista de todas as reservas existentes.
+- Cada reserva na lista pode ser editada ou cancelada.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Página de Cadastro de Usuário
+
+- Nesta página, é possível cadastrar um novo usuário.
+- Campos necessários: nome, email e número de telefone.
+- Para acessar esta página, vá para a rota `/cadastrar` ou clique no botão referente.
+
+### Página de Cadastro de Reserva
+
+- Nesta página, é possível criar uma nova reserva.
+- Campos necessários: nome do hóspede, data de início, data de fim e quantidade de pessoas.
+- Para acessar esta página, vá para a rota `/reservar` ou clique no botão referente.
+
+## Observações
+
+- Esse é um projeto inicial que deve ser aprimorado e  implementado com mais funções futuramente, como login e autenticação de usuário.
+- **Importante:** Somente hóspedes cadastrados no sistema podem criar reservas.
+
+## Capturas de Tela
+
+![Lista de Reservas](screenshots/lista_reservas.png)
+![Cadastro de Usuário](screenshots/cadastrar_usuario.png)
+![Cadastro de Reserva](screenshots/cadastrar_reserva.png)
