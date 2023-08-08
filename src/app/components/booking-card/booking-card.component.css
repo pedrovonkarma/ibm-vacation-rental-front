@@ -1,0 +1,33 @@
+p{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: small;
+}
+h2{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    background-color: aliceblue;
+}
+a{
+    cursor: pointer;
+    margin-bottom:1.5rem;
+}
+.booking-card{
+    margin: 1rem;
+    border: 1px solid lightgray;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+}
+.buttons-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}

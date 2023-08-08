@@ -1,0 +1,37 @@
+.form-container{
+    border: 1px solid gray;
+    border-radius: 2rem;
+    width: 50%;
+    margin-inline: auto;
+    padding-block: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+input{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    width: 60%;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    outline: none;
+    margin-inline: auto;
+    margin-block: 0.5rem;
+}
+button{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    width: 60%;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    cursor: pointer;
+    margin-block: 0.5rem;
+    margin-inline: auto;
+}
