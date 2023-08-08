@@ -1,21 +1,25 @@
 <div class="booking-card">
     <div>
         <p>Nome do hóspede:</p>
-        <input/>
+        <input [disabled]="isSubmitting" required="true" [(ngModel)]="bookingItem.nomeHospede"/>
         <p>Início da estadia:</p>
-        <input/>
+        <input [disabled]="isSubmitting" required="true" [(ngModel)]="bookingItem.dataInicio" />
         <p>Fim da estadia:</p>
-        <input/>
+        <input [disabled]="isSubmitting" required="true" [(ngModel)]="bookingItem.dataFim"/>
         <p>Qtd. de pessoas:</p>
-        <input type="number" min="1"/>
+        <input [disabled]="isSubmitting" required="true" [(ngModel)]="bookingItem.quantidadePessoas" type="number" min="1"/>
         <p>Situação:</p>
-        <input/>
+        <select [(ngModel)]="bookingItem.status">
+            <option value="CONFIRMADA">CONFIRMADA</option>
+            <option value="PENDENTE">PENDENTE</option>
+            <option value="CANCELADA">CANCELADA</option>
+        </select>
     </div>
-    <div class="buttons-container">
+    <div (click)="onSubmit(bookingItem.id)" class="buttons-container">
         <a>
             ✔️
         </a>
-        <a>
+        <a (click)="exitEdit()">
             ❌
         </a>
     </div>

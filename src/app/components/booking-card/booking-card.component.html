@@ -1,4 +1,4 @@
-<div class="booking-card">
+<div *ngIf="isEditing==false" class="booking-card">
     <div>
         <p>Nome do hóspede:</p>
         <h2>{{ bookingItem.nomeHospede }}</h2>
@@ -12,11 +12,12 @@
         <h2>{{ bookingItem.status }}</h2>
     </div>
     <div class="buttons-container">
-        <a>
+        <a (click)="edit()">
             ✏️
         </a>
-        <a>
+        <a (click)="onDeleteBooking(bookingItem.id)" *ngIf="bookingItem.status !== 'CANCELADA'">
             🗑️
         </a>
     </div>
 </div>
+<app-editable-booking-card *ngIf="isEditing" [bookingItem]="bookingItem"></app-editable-booking-card>

@@ -2,8 +2,8 @@ export interface IBooking {
 
     id?: Number,
     nomeHospede: String,
-    dataInicio: Date,
-    dataFim: Date,
+    dataInicio: String,
+    dataFim: String,
     quantidadePessoas: Number,
     status?: String
 

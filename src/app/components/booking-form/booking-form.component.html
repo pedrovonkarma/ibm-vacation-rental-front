@@ -1,7 +1,7 @@
-<form class="form-container">
-    <input placeholder="Nome do hóspede"/>
-    <input placeholder="Início da estadia"/>
-    <input placeholder="Fim da estadia"/>
-    <input min="1" type="number" placeholder="Qtd. de pessoas"/>
-    <button type="submit">Fazer reserva</button>
+<form class="form-container" [ngClass]="{ 'submitting': isSubmitting }" (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="booking.nomeHospede" name="nomeHospede" [disabled]="isSubmitting" required="true" placeholder="Nome do hóspede"/>
+    <input [(ngModel)]="booking.dataInicio" name="dataInicio" [disabled]="isSubmitting" required="true" placeholder="Início da estadia"/>
+    <input [(ngModel)]="booking.dataFim" name="dataFim" [disabled]="isSubmitting" required="true" placeholder="Fim da estadia"/>
+    <input [(ngModel)]="booking.quantidadePessoas" name="quantidadePessoas" [disabled]="isSubmitting" required="true" min="1" type="number" placeholder="Qtd. de pessoas"/>
+    <button [disabled]="isSubmitting" type="submit">Fazer reserva</button>
 </form>
